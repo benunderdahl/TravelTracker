@@ -43,6 +43,7 @@ app.post("/add", async (req, res) => {
   await db.query(`INSERT INTO visited_countries (country_code) VALUES ($1)`, [code])
   res.redirect("/")
   db.end()
+  
 })
 
 app.listen(port, () => {
